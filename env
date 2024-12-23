@@ -1,0 +1,9 @@
+ENTREZ_EMAIL = 'analouvain@hotmail.com'
+OPENAI_API_KEY = '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'
+PINECONE_API_KEY = '60f4d4f7-9a30-4674-849b-46f6ef00109b'
+OPENAI_API_CHAT_MODEL = 'gpt-3.5-turbo'
+OPENAI_API_EMBEDDING_MODEL = 'text-embedding-3-small'
+OPENAI_API_EMBEDDING_DIM = 1536
+PINECONE_INDEX_NAME = 'ragmed'
+GOOGLE_API_KEY = 'AIzaSyAxoYYdwOSq54onZ_B1WggQ6PutcHl8Ir4'
+GOOGLE_MODEL_NAME = 'models/gemini-1.5-flash-001'
