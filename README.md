@@ -47,9 +47,24 @@ O projeto explora e integra frameworks e tecnologias de inteligência artificial
 A proposta deste trabalho vai além do desenvolvimento de uma ferramenta prática; busca também avaliar e demonstrar o potencial de técnicas de inteligência artificial aplicadas à recuperação de informações em domínios especializados. 
 
 ### 2. Modelagem
+Nesta seção, apresentarei a modelagem técnica do chatbot **MedFusion** desenvolvido para auxiliar nas pesquisas de artigos científicos. O objetivo será detalhar os aspectos conceituais e técnicos que embasam o funcionamento do chatbot, destacando como as tecnologias e técnicas aplicadas contribuem para a solução
+
+O chatbot foi projetado para lidar com três modalidades principais de pesquisa:
+
+- **Consultas relacionadas à câncer**, utilizando artigos completos da base **PMC**:
+  Essa modalidade, envolve o desenvolvimento e execução de um script que realiza a recuperação de artigos do PMC através de uma pesquisa com termos MeSH associados a palavra chave **cancer**, segmenta os textos em chunks e armazena seus embeddings em uma base vetorial para posterior consulta por similaridade pelo chatbot na recuperação de contexto para fundamentar a resposta do LLM.
+- **Pesquisas biomédicas gerais**, utilizando abstracts de artigos do **PubMed**:
+  Essa modalidade envolve a extração de palavras-chave da pergunta realizada pelo usuário, mapeamento para termos MeSH, busca por resumos de artigos na base PubMed e geração de embeddings desses resumos e armazenamento dos mesmos em memória e consulta por similaridade para gerar contexto para fundamentar a resposta do LLM. 
+Pesquisas genéricas, nas quais as consultas são tratadas diretamente por um modelo de linguagem sem recuperação de contexto especializado.
+A modelagem faz uso de uma combinação de tecnologias e frameworks, incluindo LangChain, LangGraph, Pinecone, API BioPython, OpenAI, Gemini, Hugging Face e Gradio, cada uma desempenhando um papel essencial na implementação do sistema. A técnica de Retrieval-Augmented Generation (RAG) é central para a arquitetura do chatbot, permitindo a combinação de recuperação de informações com geração de respostas personalizadas.
+
+Por fim, são abordados o pipeline de processamento, o design dos prompts utilizados para maximizar a eficiência das respostas e a arquitetura geral do sistema, incluindo diagramas explicativos para facilitar a compreensão dos fluxos e componentes principais.
+
+<script src="https://gist.github.com/analouvain/f922b54b22bf97d728d9bfa38130404f.js"></script>
+
 #### Recuperação dos dados
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
-![MedFusion](https://github.com/analouvain/BiMasterTCC/blob/main/images/rag_medfusion.png)
+![MedFusion](https://raw.githubusercontent.com/analouvain/BiMasterTCC/refs/heads/main/images/rag_medfusion.png)
 Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
 
 ### 3. Resultados
