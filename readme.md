@@ -9,8 +9,11 @@
 Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de curso e obtenção de crédito na disciplina "Projetos de Sistemas Inteligentes de Apoio à Decisão".
 
 https://github.com/analouvain/BiMasterTCC/
+
 [app.py](https://github.com/analouvain/BiMasterTCC/blob/main/app.py)
+
 [mypubmed_utils.py](https://github.com/analouvain/BiMasterTCC/blob/main/mypubmed_utils.py)
+
 [load_articles_to_pinecone.py](https://github.com/analouvain/BiMasterTCC/blob/main/load_articles_to_pinecone.py)
 
 Interface:
